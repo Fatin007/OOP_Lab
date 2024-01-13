@@ -6,34 +6,30 @@ class deposit {
     float rate,r_value;
 public:
     deposit(){}
-    deposit(int p,int y,float r=0.12);
-    deposit(int p,int y,int r);
+    deposit(int p,int y,float r=0.12){
+        p_amount=p;
+        year=y;
+        rate=r;
+        r_value=p_amount;
+        for(int i=0;i<y;i++){
+            r_value*=(1.0+r);
+        }
+    }
+    deposit(int p,int y,int r){
+        p_amount=p;
+        year=y;
+        rate=r;
+        r_value=p_amount;
+        for(int i=0;i<y;i++){
+            r_value*=(1.0+float(r)/100);
+        }
+    }
     void display(){
         cout<<endl;
         cout<<"Principal amount = "<<p_amount<<endl;
         cout<<"Return value = "<<r_value<<endl;
     }
 };
-
-deposit :: deposit(int p, int y,float r){
-    p_amount=p;
-    year=y;
-    rate=r;
-    r_value=p_amount;
-    for(int i=0;i<y;i++){
-        r_value*=(1.0+r);
-    }
-}
-
-deposit :: deposit(int p, int y,int r){
-    p_amount=p;
-    year=y;
-    rate=r;
-    r_value=p_amount;
-    for(int i=0;i<y;i++){
-        r_value*=(1.0+float(r)/100);
-    }
-}
 
 int main(){
     deposit a,b,c;
