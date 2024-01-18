@@ -25,7 +25,7 @@ int MAX(int a,int b){
 }
 
 int main(){
-   cout<<MAX(3,5,69)<<endl;
-   cout<<MAX((float)3.43,(float)5.54,(float)69.69)<<endl;
+   cout<<MAX(3,5,6)<<endl;
+   cout<<MAX(3.43f,5.54f,59.6f)<<endl;
    cout<<MAX(55,69)<<endl;
 }
