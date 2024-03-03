@@ -16,8 +16,6 @@ int main(){
     }
     int start=0;
     int end=newS.size()-1;
-    // cout<<s<<endl;
-    // cout<<newS<<endl;
     if(isPalindrome(newS,start,end)==true){
         cout<<"Given string is Palindrome"<<endl;
     }
