@@ -143,28 +143,28 @@ int main(){
             cout<<"\nEnter employee code to search: ";
             int code; cin>>code;
             bool found=false;
-            for(auto& x:T){
+            for(auto x:T){
                 if(found==true) break;
                 if(x.get_code()==code){
                     x.display();
                     found=true;
                 }
             }
-            for(auto& x:O){
+            for(auto x:O){
                 if(found==true) break;
                 if(x.get_code()==code){
                     x.display();
                     found=true;
                 }
             }
-            for(auto& x:R){
+            for(auto x:R){
                 if(found==true) break;
                 if(x.get_code()==code){
                     x.display();
                     found=true;
                 }
             }
-            for(auto& x:C){
+            for(auto x:C){
                 if(found==true) break;
                 if(x.get_code()==code){
                     x.display();
